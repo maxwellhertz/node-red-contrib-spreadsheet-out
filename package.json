@@ -1,0 +1,29 @@
+{
+  "name": "@maxwellhertz/node-red-contrib-spreadsheet-out",
+  "version": "0.0.1",
+  "description": "A node for writing data to Excel files",
+  "main": "index.js",
+  "keywords": [
+    "node-red",
+    "spreadsheet"
+  ],
+  "author": "https://github.com/maxwellhertz",
+  "license": "ISC",
+  "scripts": {
+    "build": "node_modules/typescript/bin/tsc && cp src/index.html build/index.html"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+    "node-red-node-test-helper": "^0.3.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
+  },
+  "node-red": {
+    "version": ">=3.1.0",
+    "nodes": {
+      "json-to-sheet": "build/index.js"
+    }
+  }
+}

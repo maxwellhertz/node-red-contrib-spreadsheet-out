@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType("json-to-sheet", {
+        category: "function",
+        color: "#068a19",
+        defaults: {
+            name: { value: "" },
+            filePath: { value: "" },
+            sheetName: { value: "" }
+        },
+        inputs: 1,
+        outputs: 0,
+        icon: "file.svg",
+        label: function () {
+            return this.name || "json-to-sheet";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="json-to-sheet">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-filePath"><i class="fa fa-tag"></i> Path</label>
+        <input required type="text" id="node-input-filePath" placeholder="The absolute path to the output file">
+        <label for="node-input-sheetName"><i class="fa fa-tag"></i> Sheet Name</label>
+        <input type="text" id="node-input-sheetName" placeholder="The name of the new worksheet">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="json-to-sheet">
+    <p>A simple node that converts a JSON payload to an Excel file.</p>
+</script>
